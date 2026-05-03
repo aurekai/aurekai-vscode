@@ -2,26 +2,44 @@
   <img src="https://raw.githubusercontent.com/aurekai/aurekai/main/assets/aurekai-logo.svg" alt="Aurekai" width="520" />
 </p>
 
-# aurekai-vscode
+# Aurekai VS Code Extension · v0.8.0-alpha.5
 
-Aurekai integration surface for Vscode.
+Run Aurekai capability operators directly from VS Code — WebviewPanel JSON output, StatusBar live status, 9 commands.
 
-Status: active
-Type: ide
+## Features
 
-## Core Template Set
+- **Status bar**: live Aurekai runtime indicator; click to run `doctor --deep`
+- **WebviewPanel**: formatted JSON output side-by-side with your editor; proof URI highlighted
+- **9 commands** via Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`):
 
-- doctor-deep
-- manifest-verify
-- model-memory-pack
-- sae-audit
-- semantic-cache-bench
-- proof-bundle-export
-- release-gate
+| Command | Operator |
+|---|---|
+| `Aurekai: Doctor Deep` | `akai doctor --deep` |
+| `Aurekai: Verify Manifest` | `akai verify --manifest artifact.json` |
+| `Aurekai: Pack Model Memory` | `akai pack --tag latest` |
+| `Aurekai: Release Gate` | `akai release gate` |
+| `Aurekai: SAE Audit` | `akai sae audit` |
+| `Aurekai: Semantic Cache Benchmark` | `akai cache bench` |
+| `Aurekai: Export Proof Bundle` | `akai proof export` |
+| `Aurekai: Runtime Status` | `akai status` |
+| `Aurekai: Search Capabilities` | `akai search --query <input>` |
 
-## Canonical References
+## Requirements
 
-- Platform: https://github.com/aurekai/aurekai
-- Native runtime: https://github.com/aurekai/native-runtime
-- Integration registry: https://github.com/aurekai/aurekai/blob/main/registry/integrations.json
-- Ecosystem map: https://github.com/aurekai/aurekai/blob/main/ECOSYSTEM_NAMES.md
+- `akai` binary on `PATH` (`npm install -g @aurekai/runtime`)
+
+## Settings
+
+| Setting | Default | Description |
+|---|---|---|
+| `aurekai.version` | `0.8.0-alpha.5` | Aurekai runtime version |
+| `aurekai.binary` | `akai` | Path to `akai` binary |
+
+## Development
+
+```bash
+npm install
+npm run compile
+# Press F5 in VS Code to launch Extension Development Host
+```
+

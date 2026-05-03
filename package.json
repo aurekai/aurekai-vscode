@@ -18,7 +18,15 @@
     "akai"
   ],
   "activationEvents": [
-    "onCommand:aurekai.doctorDeep"
+    "onCommand:aurekai.doctorDeep",
+    "onCommand:aurekai.manifestVerify",
+    "onCommand:aurekai.modelMemoryPack",
+    "onCommand:aurekai.releaseGate",
+    "onCommand:aurekai.saeAudit",
+    "onCommand:aurekai.semanticCacheBench",
+    "onCommand:aurekai.proofBundleExport",
+    "onCommand:aurekai.runtimeStatus",
+    "onCommand:aurekai.searchCapabilities"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -38,6 +46,26 @@
       {
         "command": "aurekai.releaseGate",
         "title": "Aurekai: Release Gate"
+      },
+      {
+        "command": "aurekai.saeAudit",
+        "title": "Aurekai: SAE Audit"
+      },
+      {
+        "command": "aurekai.semanticCacheBench",
+        "title": "Aurekai: Semantic Cache Benchmark"
+      },
+      {
+        "command": "aurekai.proofBundleExport",
+        "title": "Aurekai: Export Proof Bundle"
+      },
+      {
+        "command": "aurekai.runtimeStatus",
+        "title": "Aurekai: Runtime Status"
+      },
+      {
+        "command": "aurekai.searchCapabilities",
+        "title": "Aurekai: Search Capabilities"
       }
     ],
     "configuration": {
@@ -45,8 +73,13 @@
       "properties": {
         "aurekai.version": {
           "type": "string",
-          "default": "0.8.0-alpha.4",
+          "default": "0.8.0-alpha.5",
           "description": "Aurekai CLI version"
+        },
+        "aurekai.binary": {
+          "type": "string",
+          "default": "akai",
+          "description": "Path to the akai binary (defaults to akai on PATH)"
         }
       }
     }
