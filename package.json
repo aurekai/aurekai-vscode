@@ -1,0 +1,63 @@
+{
+  "name": "aurekai-vscode",
+  "displayName": "Aurekai",
+  "description": "Aurekai AI pipeline integration for VS Code (Marketplace edition)",
+  "version": "0.8.0-alpha.4",
+  "publisher": "aurekai",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Machine Learning"
+  ],
+  "keywords": [
+    "aurekai",
+    "ai",
+    "pipeline",
+    "akai"
+  ],
+  "activationEvents": [
+    "onCommand:aurekai.doctorDeep"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aurekai.doctorDeep",
+        "title": "Aurekai: Doctor Deep"
+      },
+      {
+        "command": "aurekai.manifestVerify",
+        "title": "Aurekai: Verify Manifest"
+      },
+      {
+        "command": "aurekai.modelMemoryPack",
+        "title": "Aurekai: Pack Model Memory"
+      },
+      {
+        "command": "aurekai.releaseGate",
+        "title": "Aurekai: Release Gate"
+      }
+    ],
+    "configuration": {
+      "title": "Aurekai",
+      "properties": {
+        "aurekai.version": {
+          "type": "string",
+          "default": "0.8.0-alpha.4",
+          "description": "Aurekai CLI version"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0"
+  }
+}
